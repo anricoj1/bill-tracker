@@ -1,0 +1,100 @@
+/* html */
+html, body, .App, #root {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-color: #242424;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/* home and spacing */
+.homeDiv {
+    height: 100%;
+}
+
+.extraSpace {
+    padding-top: 260px;
+}
+
+.pad20R {
+    padding-right: 10px;
+}
+
+.lastTable {
+    padding-bottom: 200px;
+}
+
+.titleMain {
+    color: white;
+    padding-top: 150px;
+    letter-spacing: 15px;
+    font-size: 30px;
+    font-weight: bold;
+    padding-bottom: 50px;
+}
+
+.btn-purple {
+    background-color: purple;
+    color: white;
+}
+
+.btn-purple:hover {
+    background-color: white;
+    color: black;
+}
+
+button {
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+/* table css */
+.custom-table {
+    width: 100%;
+    background-color: navy;
+    color: white;
+}
+
+table {
+    border-radius: 20px;
+    border-collapse: inherit;
+}
+
+table, tr, th, td {
+    border: 1px solid blueviolet;
+    text-align: center;
+}
+
+th, td {
+    height: 75px;
+}
+
+th:hover, td:hover {
+    background-color: white;
+    color: black;
+}
+
+th:first-of-type {
+    border-top-left-radius: 20px;
+}
+
+th:last-of-type {
+    border-top-right-radius: 20px;
+}
+
+tr:last-of-type, td:first-of-type {
+    border-bottom-left-radius: 20px;
+}
+tr:last-of-type, td:last-of-type {
+    border-bottom-right-radius: 20px;
+}
+
+
+
+
