@@ -7,28 +7,38 @@ import Table from './Table';
 import '../page.css';
 
 
+
 class Home extends Component {
-    scrollJason() {
-        const tableJason = document.getElementById('j');
-        console.log(tableJason);;
+    constructor(props) {
+        super(props);
+        this.data = this.props.data;
     }
+
+    toggleJason() {
+        const divJsn = document.querySelector('#Jason');
+
+        divJsn.scrollIntoView({ behavior: 'smooth', block: 'start'});
+    }
+
+    toggleAlisha() {
+        const divAlisha = document.querySelector('#Alisha');
+
+        divAlisha.scrollIntoView({ behavior: 'smooth', block: 'start'});
+    }
+
     render() {    
         return (
             <div className="container homeDiv">
                 <h1 className="titleMain text-center">Monthly Bills</h1>
                 <div className="text-center">
-                    <button onClick={this.scrollJason()} id="btn-jason" className="btn btn-primary">Go to Jason</button>
-                    <button id="btn-alisha" className="btn btn-purple">Go to Alisha</button>
+                    <button className="btn btn-primary" onClick={this.toggleJason}>Go to Jason</button>
+                    <button className="btn btn-purple" onClick={this.toggleAlisha}>Go to Alisha</button>
                 </div>
-                <div>
-                    <Table items={new Database('Shared Bills').tables()} name="Shared Bills" />
-                </div>
-                <div className="extraSpace">
-                    <Table items={new Database('Jason').tables()} name="Jason" />
-                </div>
-                <div className="extraSpace lastTable">
-                    <Table items={new Database('Alisha').tables()} name="Alisha" />
-                </div>
+                {this.data.map((data, i) => (
+                    <div key={i} className="extraSpace">
+                        <Table items={new Database(data.table).tables()} name={data.table} />
+                    </div>
+                ))}
             </div>
         )
     }

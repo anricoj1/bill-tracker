@@ -96,5 +96,11 @@ tr:last-of-type, td:last-of-type {
 }
 
 
+@media screen and (max-height: 976px) {
+    .extraSpace {
+        padding-top: 370px;
+    }
+}
+
 
 
