@@ -39,12 +39,22 @@ html, body, .App, #root {
     padding-bottom: 50px;
 }
 
-.btn-purple {
+#btn-Alisha {
     background-color: purple;
     color: white;
 }
 
-.btn-purple:hover {
+#btn-Jason {
+    background-color: blue;
+    color: white;
+}
+
+#btn-Jason:hover {
+    background-color: white;
+    color: black;
+}
+
+#btn-Alisha:hover {
     background-color: white;
     color: black;
 }
